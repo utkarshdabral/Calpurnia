@@ -1,0 +1,74 @@
+{
+  "status": "success",
+  "timestamp_utc": "2026-01-26T15:31:36.911938Z",
+  "propagation_hours": 24,
+  "satellite_1": {
+    "name": "ISS (ZARYA)",
+    "catalog_id": 25544,
+    "tle": "1 25544U 98067A   26024.81951359  .00017054  00000+0  32584-3 0  9996\n2 25544  51.6323 289.2130 0011027  26.4083 333.7465 15.48158028549530"
+  },
+  "satellite_2": {
+    "name": "ISS (ZARYA)",
+    "catalog_id": 25544,
+    "tle": "1 25544U 98067A   26024.81951359  .00017054  00000+0  32584-3 0  9996\n2 25544  51.6323 289.2130 0011027  26.4083 333.7465 15.48158028549530"
+  },
+  "conjunction_assessment": {
+    "satellite_1": "ISS (ZARYA)",
+    "satellite_2": "ISS (ZARYA)",
+    "dca_km": 0.0,
+    "tca_seconds": 0.0,
+    "tca_index": 0,
+    "probability_of_collision": 0.9999999999999993,
+    "alert": true,
+    "keep_out_sphere_km": 2.0,
+    "inside_keep_out": "True"
+  },
+  "maneuver_plan": {
+    "recommended_maneuver": {
+      "delta_v_m_s": {
+        "x": 0.06094357944180521,
+        "y": -0.09494065867900864,
+        "z": -0.4832470617089917,
+        "magnitude": 0.4962414444561817
+      },
+      "burn_time_utc": "2026-01-26T15:31:36.911938Z",
+      "fuel_cost_kg": 1.0961064723241654,
+      "predicted_dca_improvement_km": 1.7864692000420594,
+      "risk_reduction_factor": 0.9590670407438373
+    },
+    "top_alternatives": [
+      {
+        "delta_v_m_s": {
+          "x": -0.037043902434872544,
+          "y": 0.17905980581176828,
+          "z": -0.46088782159914254,
+          "magnitude": 0.4958349008121106
+        },
+        "burn_time_utc": "2026-01-26T15:31:36.911938Z",
+        "fuel_cost_kg": 1.09520841621924,
+        "predicted_dca_improvement_km": 1.7850056429248733,
+        "risk_reduction_factor": 0.9590370759195163
+      },
+      {
+        "delta_v_m_s": {
+          "x": -0.23816134503825215,
+          "y": -0.4244837861962499,
+          "z": -0.0910141260249309,
+          "magnitude": 0.4951675293776996
+        },
+        "burn_time_utc": "2026-01-26T15:31:36.911938Z",
+        "fuel_cost_kg": 1.0937341910258747,
+        "predicted_dca_improvement_km": 1.7826031057607201,
+        "risk_reduction_factor": 0.9589878388783741
+      }
+    ],
+    "performance_metrics": {
+      "initial_dca_km": 0.0,
+      "predicted_dca_km": 1.7864692000420594,
+      "initial_pc": 0.9999999999999993,
+      "predicted_pc": 0.040932959160256,
+      "risk_reduction_factor": 24.430190684281964,
+      "fuel_cost_kg": 1.0961064723241654
+    }
+  }
+}
