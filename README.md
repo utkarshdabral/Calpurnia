@@ -112,3 +112,4 @@ print(dss.generate_explainability_report(result))
 ---
 
 *"The best prediction of the future is to build it."*
+High-fidelity orbital mechanics engine and Conjunction Assessment Risk Analysis (CARA) framework. Calpurnia automates satellite debris tracking, collision probability modeling, and optimal maneuver planning using SGP4 propagation and covariance-based risk estimation.
