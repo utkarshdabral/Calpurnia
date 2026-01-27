@@ -1,0 +1,67 @@
+AUTONOMOUS SATELLITE TRAFFIC MANAGEMENT SYSTEM
+=============================================
+
+PROJECT OVERVIEW
+----------------
+Developing an autonomous satellite traffic management system that predicts
+and avoids on-orbit collisions using Physics-Informed Neural Networks (PINNs)
+and Reinforcement Learning (RL).
+
+The system goes beyond simple distance-based conjunction checks and instead
+computes a statistical probability of collision (Pc) for more accurate and
+reliable decision-making.
+
+
+DATA SOURCE
+-----------
+• Two-Line Element (TLE) data
+• Sources: CelesTrak
+
+
+ORBIT PROPAGATION & PHYSICS MODELING
+-----------------------------------
+• Baseline propagation using the SGP4 orbital model
+• Trajectory refinement using a Physics-Informed Neural Network (PINN)
+• PINN accounts for unmodeled effects such as:
+  - Atmospheric drag
+  - Solar activity perturbations
+• PINN implemented using PyTorch
+
+
+RISK ASSESSMENT ENGINE
+---------------------
+• Monte Carlo simulations for uncertainty modeling
+• Covariance matrices to represent positional uncertainty
+• A 5 km radius "Uncertainty Bubble" around each object
+• Reduces false collision alarms
+• Outputs statistical collision probability (Pc)
+
+
+COLLISION AVOIDANCE LOGIC
+------------------------
+• Deep Reinforcement Learning agent
+• Algorithm: Proximal Policy Optimization (PPO)
+• Framework: Stable Baselines3
+• Objective:
+  - Minimize fuel usage
+  - Reduce Pc below safety threshold (Pc < 1e-4)
+• Outputs optimal thrust maneuver decisions
+
+
+VISUALIZATION
+-------------
+• 3D orbital visualization using CesiumJS
+• Real-time conjunction and maneuver visualization
+
+
+TECH STACK
+----------
+• Python
+• FastAPI
+• PyTorch
+• SciPy
+• NumPy
+• SGP4
+• Skyfield
+• Stable Baselines3
+• CesiumJS

@@ -1,6 +1,6 @@
 import requests
 import os
-from typing import Optional
+from typing import Optional, List
 
 def fetch_tle(catalog_id: int) -> Optional[str]:
     """Fetches TLE data and saves it to a pre-existing data directory."""
@@ -28,5 +28,33 @@ def fetch_tle(catalog_id: int) -> Optional[str]:
     except requests.RequestException:
         return None
 
+def fetch_multiple_tles(catalog_ids: List[int]) -> List[Optional[str]]:
+    """Fetch TLEs for multiple satellites."""
+    tles = []
+    for cid in catalog_ids:
+        tle = fetch_tle(cid)
+        tles.append(tle)
+    return tles
+
+def get_active_satellites(limit: int = 10) -> List[int]:
+    """Get list of active satellite NORAD IDs from Celestrak."""
+    # For demo, return some known active satellites
+    # In production, scrape from https://celestrak.org/NORAD/elements/active.txt
+    active_ids = [
+        25544,  # ISS
+        44713,  # Starlink-24
+        44714,  # Starlink-25
+        44715,  # Starlink-26
+        44716,  # Starlink-27
+        44717,  # Starlink-28
+        44718,  # Starlink-29
+        44719,  # Starlink-30
+        44720,  # Starlink-31
+        44721,  # Starlink-32
+    ]
+    return active_ids[:limit]
+
 if __name__ == "__main__":
-    fetch_tle(25544)
+    # Fetch ISS and some Starlinks
+    ids = [25544, 44713, 44714, 44715]
+    fetch_multiple_tles(ids)
